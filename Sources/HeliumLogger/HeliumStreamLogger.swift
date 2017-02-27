@@ -52,6 +52,6 @@ public class HeliumStreamLogger<OutputStream: TextOutputStream> : HeliumLogger {
     }
 
     override func doPrint(_ message: String) {
-        print(message, to: &outputStream)
+        outputStream.write(message)
     }
 }
